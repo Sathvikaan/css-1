@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* task-1 */
+        .box-px{
+            width:200px;
+            height:100px;
+            border:2px solid;
+        }
+        /* task-2 */
+        .parent-percent{
+            width:800px;
+            height:100px;
+            border:2px solid;  
+        }
+        .child-percent{
+            width:50%;
+            height:50%;
+            background-color: blanchedalmond;
+        }
+        /* task-3 */
+        .rem-paragraph{
+            font-size: 2rem;
+        }
+        /* task-4 */
+        .parent-em{
+            /* width:200px; */
+            /* height:200px; */
+            border: 2px solid;;
+         font-size: 16px;
+        }
+        .child-em{
+            font-size: 1.5em;
+        }
+        /* task-5 */
+        .box-vw{
+            width:50vw;
+            border:2px solid;
+        }
+        /* task-6 */
+        .box-vh{
+            height:25vh;
+            border:2px solid;
+        }
+        /* task-7 */
+        .square-vmin{
+            width:20vmin;
+            height:20vmin;
+            border:2px solid;
+        }
+        /* task-8 */
+        .square-vmax{
+            width:20vmax;
+            height:20vmax;
+            border:2px solid;
+        }
+        /* task-9 */
+        .parent-relative{
+            width:20vmax;
+            height:20vmax;
+            border:2px solid;
+            position: relative;
+        }
+       .child-absolute{
+        width:20vmin;
+        height:20vmin;
+        border:2px solid;
+        position:absolute;
+        bottom:0;
+        right:0
+       } 
+       /* task-10 */
+       .parent-font{
+        font-size: 20px;
+       }
+       .child-font{
+        font-size: inherit;
+       }
+    </style>
+</head>
+<body>
+    <!-- task-1 -->
+     <h1>task-1</h1>
+    <div class="box-px">Box with px units</div> <br><br>
+    <!-- task-2 -->
+     <h1>task-2</h1>
+    <div class="parent-percent">
+        <div class="child-percent">Box with % units</div>
+    </div> <br>
+    <!-- task-3 -->
+     <h1>task-3</h1>
+     <p class="rem-paragraph">This paragraph uses rem units ,(it becomes 32px).</p> <br>
+     <!-- task-4 -->
+      <h1>task-4</h1>
+      <div class="parent-em">hello world(16px)
+        <p class="child-em">This paragraph uses em units(1.5*16=24).</p>
+    </div> <br>
+    <!-- task-5 -->
+     <h1>task-5</h1>
+     <div class="box-vw">Box with vw units</div>
+<!-- task-6 -->
+ <h1>task-6</h1>
+ <div class="box-vh">Box with vh units</div>
+ <!-- task-7 -->
+  <h1>task-7</h1>
+  <div class="square-vmin">Square with vmin units</div>
+  <!-- task-8 -->
+   <h1>task-8</h1>
+   <div class="square-vmax">Square with vmax units</div>
+   <!-- task-9 -->
+    <h1>task-9</h1>
+    <div class="parent-relative">
+        <div class="child-absolute">Child Box</div>
+    </div>
+    <!-- task-10 -->
+     <h1>task-10</h1>
+     <div class="parent-font">
+        Parent Text
+        <div class="child-font">Child Text (Inherits Font Size)</div>
+    </div>    
+</body>
+</html>
