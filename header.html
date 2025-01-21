@@ -1,58 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style> 
-      header{
-             display:flex;
-             position:fixed;
-             width:100%;
-             justify-content:space-around;
-             background-color:black;
-             padding:8px;
-             top:0px;
-             z-index:999;
-             }
-       nav{
-            display:flex;
-            padding:10px;
-            width:100%;
-            justify-content:center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            border: 2px solid;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            background-color: burlywood;
+        }
+        .orange {
+            padding: 10px;
+            border: 2px solid;
+            background-color: orange;
+        }
+        .container-2 {
+            border: 2px solid;
+            display: flex;
+            padding: 10px;
+        }
+        .yellow {
+            border: 2px solid;
+            background-color: yellow;
+            margin-right: 20px;
+            padding: 5px;
+        }
+        .green {
+            border: 2px solid;
+            background-color: green;
+            padding: 5px;
+        }
+        .white {
+            border: 2px solid;
+            background-color: white;
+            padding: 5px;
+            display: none;
+        }
+        @media screen and (max-width : 500px){
+            .white{
+                display: block;
             }
-
-        a{
-          color:white;
-          text-decoration:none;}
-
-
-        nav:hover>a{
-                     color:black;
-                     }
-        nav:hover{                 
-                background-color:white;
-                   }
-
-      
-   </style>
-  </head>
-
+            .container-2{
+                display: none;
+            }
+        }
+    </style>
+</head>
 
 <body>
-<header>
-<nav> 
-        <a href="#">HOME</a>
- </nav>
-<nav>
-         <a href="#">ABOUT</a>
+    <header>
+        <div class="orange">orange</div>
+        <div class="container-2">
+            <div class="yellow">yellow</div>
+            <div class="green">green</div>
+        </div>
+        <div class="white">white</div>
 
-    </nav>
-<nav>
-        <a href="#">MENU</a>
-
-     </nav>
-<nav>
-         <a href="#">WHERE</a>
-
-      </nav>
-</header>
+    </header>
 </body>
 </html>
