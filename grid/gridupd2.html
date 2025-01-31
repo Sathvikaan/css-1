@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            padding: 10px;
+            gap: 10px;
+            background-color: gray;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            /* grid-template-rows: repeat(4, 1fr); */
+            grid-template-areas:
+                'a b b c c'
+                'd b b e e'
+                'f g h i j'
+                'k l h m n';
+        }
+
+        .item-5,
+        .item-6,
+        .item-7,
+        .item-8,
+        .item-9,
+        .item-10,
+        .item-11,
+        .item-12,
+        .item-13,
+        .item-14 {
+            text-align: center;
+            align-content: center;
+            background: linear-gradient(orange, pink)
+        }
+
+        .item-1 {
+            text-align: center;
+            align-content: center;
+            background: linear-gradient(violet, pink);
+            grid-area: a;
+        }
+
+        .item-2 {
+            text-align: center;
+            align-content: center;
+            background: linear-gradient(violet, pink);
+            grid-area: b;
+        }
+
+        .item-3 {
+            text-align: center;
+            align-content: center;
+            background: linear-gradient(lightblue, lightpink);
+            grid-area: c;
+        }
+
+        .item-4 {
+            text-align: center;
+            align-content: center;
+            background: linear-gradient(lightblue, lightpink);
+            grid-area: d;
+        }
+
+        .item-5 {
+            grid-area: e;
+        }
+
+        .item-6 {
+            grid-area: f;
+        }
+
+        .item-7 {
+            grid-area: g;
+        }
+
+        .item-8 {
+            grid-area: h;
+        }
+
+        .item-9 {
+            grid-area: i;
+        }
+
+        .item-10 {
+            grid-area: j;
+        }
+
+        .item-11 {
+            grid-area: k;
+        }
+
+        .item-12 {
+            grid-area: l;
+        }
+
+        .item-13 {
+            grid-area: m;
+        }
+
+        .item-14 {
+            grid-area: n;
+        }
+
+        @media screen and (max-width : 595px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    'a'
+                    'b'
+                    'c'
+                    'd'
+                    'e'
+                    'f'
+                    'g'
+                    'h'
+                    'i'
+                    'j'
+                    'k'
+                    'l'
+                    'm'
+                    'n';
+            }
+        }
+
+        @media screen and (min-width : 595px) and (max-width : 1000px) {
+            .grid-container {
+                grid-template-columns:repeat(2,1fr);
+                grid-template-areas: 
+                'a b'
+                'c d'
+                'e f'
+                'g h'
+                'i j'
+                'k l'
+                'm n';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+        <div class="item item-6">6</div>
+        <div class="item item-7">7</div>
+        <div class="item item-8">8</div>
+        <div class="item item-9">9</div>
+        <div class="item item-10">10</div>
+        <div class="item item-11">11</div>
+        <div class="item item-12">12</div>
+        <div class="item item-13">13</div>
+        <div class="item item-14">14</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: lightslategray;
+        }
+
+        .grid-container>* {
+            /* background-color: lightblue; */
+            /* color:#fff; */
+            font-size: 1.5rem;
+            padding: 10px;
+            text-align: center;
+            border: 5px solid;
+            /* background-image: linear-gradient(blue, lightblue); */
+        }
+
+
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            height: 100vh;
+            grid-template-columns: 1fr 1.5fr 1.5fr;
+            grid-template-rows: 1fr 2fr 2fr 1fr;
+            background-color: lightslategray;
+        }
+
+        header {
+            grid-column: 1/4;
+            background-color: blue;
+        }
+
+        footer {
+            grid-column: 1/4;
+            background-color: blueviolet;
+        }
+
+        .content-1 {
+            grid-column: 2/4;
+            background-image: linear-gradient(rgba(0, 0, 255, 0.377), lightblue);
+        }
+
+        .content-2 {
+            grid-column: 2/3;
+            background-image: linear-gradient(rgba(0, 0, 255, 0.377), lightblue);
+        }
+
+        .content-3 {
+            background-image: linear-gradient(rgba(0, 0, 255, 0.377), lightblue);
+        }
+
+        aside {
+            grid-row: 2/4;
+            background-image: linear-gradient(lightgreen, rgba(144, 238, 225, 0.582));
+        }
+
+        @media screen and (max-width : 595px) {
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            header,
+            aside,
+            .content-1,
+            .content-2,
+            .content-3,
+            footer {
+                grid-column: auto;
+                grid-row: auto;
+            }
+        }
+
+        @media screen and (min-width : 595px) and (max-width :1000px){
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header,
+            aside,
+            .content-1,
+            .content-2,
+            .content-3,
+            footer {
+                grid-column: auto;
+                grid-row: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>HEADER</header>
+        <aside>sidebar</aside>
+        <div class="content-1">content-1</div>
+        <div class="content-2">content-2</div>
+        <div class="content-3">content-3</div>
+        <footer>FOOTER</footer>
+    </div>
+</body>
+
+</html>

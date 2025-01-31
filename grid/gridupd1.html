@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            padding:10px;
+            display: grid;
+            background-color: gainsboro;
+            height: 100vh;
+            grid-template-columns:1fr 1.5fr 1.5fr;
+            grid-template-rows: 1fr 2fr 2fr 1fr;
+            gap: 10px;
+            grid-template-areas:
+            'a a a'
+            'b c c'
+            'b d e'
+            'f f f';
+        }
+
+        .item {
+            padding: 10px;
+            font-size: 1.5rem;
+            text-align: center;
+            border:2px solid;
+        }
+
+        .item-1 {
+            grid-area: a;
+            background: linear-gradient(lightblue,blue);
+        }
+
+        .item-2 {
+            grid-area: b;
+            background-image: linear-gradient(lightgreen, rgba(144, 238, 225, 0.582));
+        }
+
+        .item-3 {
+            grid-area: c;
+            background-image: linear-gradient(rgba(0, 0, 255, 0.377), lightblue);
+        }
+
+        .item-4 {
+            grid-area: d;
+            background-image: linear-gradient(rgba(0, 0, 255, 0.377), lightblue);
+        }
+
+        .item-5 {
+            grid-area: e;
+            background-image: linear-gradient(rgba(0, 0, 255, 0.377), lightblue);
+        }
+
+        .item-6 {
+            grid-area: f;
+            background:linear-gradient(purple,violet)
+        }
+        @media screen and (max-width :595px){
+          .grid-container{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+          grid-template-areas: 
+          'a'
+          'b'
+          'c'
+          'd'
+          'e'
+          'f';
+          }
+        }
+        @media screen and (min-width : 596px) and (max-width : 1000px){
+            .grid-container{
+                grid-template-columns:1fr 1fr;
+                grid-template-areas:
+                'a b'
+                'c d'
+                'e f'
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="item item-1">header</div>
+        <div class="item item-2">sidebar</div>
+        <div class="item item-3">content-1</div>
+        <div class="item item-4">content-2</div>
+        <div class="item item-5">content-3</div>
+        <div class="item item-6">footer</div>
+    </div>
+</body>
+
+</html>
